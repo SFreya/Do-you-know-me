@@ -4,6 +4,16 @@ var playerName=readlineSync.question("Hey! ur name plz ? ");
 
 console.log("Nice to have you "+ playerName + " to do you know Sakshi ?");
 
+
+var highScore=[{
+    name: "Sakshi",
+    score:6
+  },
+  {
+    name:"Ankita",
+    score:5
+  }];
+
 function quiz(question,answer)
 {
   var userAnswer=readlineSync.question(question);
@@ -58,3 +68,10 @@ console.log("Your total score is : "+ finalScore);
 console.log("*******************");
 
 console.log("Check out the score board ");
+
+for(var i=0;i<highScore.length;i++)
+{
+  var currentPerson=highScore[i];
+  console.log(currentPerson.name + " " + currentPerson.score);
+}
+
